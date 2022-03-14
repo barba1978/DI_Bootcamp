@@ -1,0 +1,46 @@
+
+
+/*style of body*/
+body{
+	background-color: lightsalmon;
+	text-align: center;
+}
+
+
+/*style the sign up */
+.signup,.login{
+	width: 400px;
+	height: 400px;
+	background-color: rgb(20, 200, 200);
+	line-height: 30px;
+	text-align: center;
+	border-radius: 20px;
+	margin: auto;
+
+}
+
+label{
+	font-size: 1.2em;
+}
+input{
+	width: 60%;
+	height: 20px;
+}
+input[type="submit"]{
+	width: 40%;
+	height: 30px;
+	background-color: lightsalmon;
+}
+
+input[type="submit"]:hover{
+	background-color: white;
+	color: black;
+}
+
+/*style the login */
+
+.login{
+	height: 250px;
+
+
+}

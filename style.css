@@ -1,0 +1,65 @@
+/*style of body */
+
+body{
+	margin: 0;
+	height: 100%;
+	
+}
+
+
+/*style of header */
+
+
+/* style the nav bar */
+
+
+nav{
+	background-color: purple;
+	
+	height: 70px;
+
+}
+
+img{
+	height: 60px;
+	width: 60px;
+	opacity: 0.8;
+}
+
+li {
+	display: inline-block;
+	color: black;
+	font-size: 1.5em;
+	position: relative;
+	right: -1000px;
+	top: -50px;
+}
+
+li:hover{
+	opacity: 0.5;
+}
+
+/*style of section*/
+
+section{
+	background-image:url("winery.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height:800px; 
+	padding-top: 100px;
+}
+
+
+h1{
+	font-size: 7em;
+	font-family: 'MedievalSharp', cursive;
+	text-align: center;
+}
+
+footer{
+	text-align: center;
+	border-top: 2px solid black;
+	height: 50px;
+	font-size: 2em;
+}
