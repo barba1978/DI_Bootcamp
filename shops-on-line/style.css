@@ -1,4 +1,8 @@
 /*style of body */
+*{
+	box-sizing: border-box;
+}
+
 
 body{
 	margin: 0;
@@ -15,8 +19,10 @@ body{
 
 nav{
 	background-color: purple;
-	
 	height: 70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
 }
 
@@ -24,15 +30,17 @@ img{
 	height: 60px;
 	width: 60px;
 	opacity: 0.8;
+	border-radius: 100%;
 }
+
+
+
 
 li {
 	display: inline-block;
 	color: black;
 	font-size: 1.5em;
-	position: relative;
-	right: -1000px;
-	top: -50px;
+	
 }
 
 li:hover{

@@ -1,0 +1,46 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.big{
+
+	border: 2px solid black;
+	height: 400px;
+	display:flex;
+	flex-wrap: wrap;
+	padding: 2px;
+	
+}
+
+.small{
+
+	background-color: lightblue;
+	border: 2px solid black;
+	height: 50px;
+	width: 10%;
+
+}
+
+.small1{
+	background-color: lightgrey;
+	border: 2px solid black;
+	height: 50px;
+	width: 45%;
+}
+
+.small2{
+	background-color: lightgreen;
+	border: 2px solid black;
+	height: 50px;
+	width: 45%;
+}
+
+.center{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+
+}
