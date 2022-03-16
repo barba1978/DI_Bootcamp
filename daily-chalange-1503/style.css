@@ -10,26 +10,27 @@ section{
 
 }
 
-.side,.central{
+.cube{
 
-	width: 30px;
-	height: 30px;
+	width: 60px;
+	height: 60px;
 	background-color: yellow;
 	border: 1px solid black;
 
 }
 
-.left,.midle,.right{
+.left,.middle,.right{
 
 	border: 1px solid black;
-	height: 200px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
 }
-.midle{
-	width: 200px;
+
+.middle{
+	width: 400px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
