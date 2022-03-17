@@ -1,0 +1,28 @@
+
+/* body style */
+*{
+	box-sizing: border-box;
+	margin: 0;}
+
+	
+/* <section style */
+
+header{
+	background-image: url(background1.jpeg);
+	height: 1000px;
+}
+
+nav{
+	background-color: #000000;
+}
+
+h1{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 3.5em;
+	color: rgb(0, 85, 126,0.8);
+}
+
+section{
+
+
+}
