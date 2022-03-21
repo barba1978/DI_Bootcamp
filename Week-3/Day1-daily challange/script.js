@@ -29,6 +29,5 @@ let moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
 let newArray=moreFruits[1]
 let newArray1= newArray[1]
-let newArray2= newArray1[0]
 
-console.log(newArray2)
+console.log(newArray1)
