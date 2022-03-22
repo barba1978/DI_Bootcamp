@@ -1,5 +1,4 @@
 
-
 let people = ["Greg", "Mary", "Devon", "James"]
 
 people.splice(0,1)
@@ -139,14 +138,3 @@ for (let i=0;i<names.length;i++){
 
 	console.log(names[i].charAt(0))
 }
-
-
-
-
-
-
-
-
-
-
-
