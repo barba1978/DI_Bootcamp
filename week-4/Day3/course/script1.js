@@ -1,25 +1,16 @@
 
 
 
-// setTimeout(myFunction,2000)
-
-// function myFunction(){
-
-// 	document.getElementsByTagName("h1")[0].innerHTML="test "
 
 
-// }
-
-
-let id = setInterval(mynewfunction, 1000)
-let i=3
-function mynewfunction(event){
-	
-	if (i>=0){
-		document.getElementsByTagName("h1")[0].
-		else {
-			clearInterval(id)
-			document.getElementsByTagName("h1")[0].textContent="finished "
-
-		}
-	}
+let id = setInterval(mynewfunction, 10)
+let i=0
+function mynewfunction(){
+	console.log(i)
+	if (i>=600){
+		clearInterval(id)
+	} else {
+		i++
+		document.getElementById("h1").style.left=`${i}px`
+		document.getElementById("h1").style.top=`${i}px`
+	}}
