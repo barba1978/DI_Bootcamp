@@ -1,0 +1,22 @@
+
+section{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+
+div{
+
+	
+	width: 80px;
+	height: 80px;
+	margin: 15px;
+	border: 2px solid blue;
+	background-color: lightblue;
+	text-align: center;
+	font-size: 30px;
+	margin-top:250px;
+}

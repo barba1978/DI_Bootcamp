@@ -10,8 +10,9 @@ fill.addEventListener("dragstart",dragStart)
 fill.addEventListener("dragend",dragEnd)
 
 
-function dragStart(){
+function dragStart(event){
 	this.style.backgroundColor = "red"
+	event.dataTransfer.setData("text/plain", event.target.id)
 
 }
 
@@ -27,7 +28,7 @@ for ( let x of empties){
 	x.addEventListener("dragenter",dragEnter)
 	x.addEventListener("dragleave",dragLeave)
 	x.addEventListener("drop",dragDrop)
-	
+
 
 }
 
@@ -37,15 +38,17 @@ function dragOver(e){
 
 }
 function dragEnter(e){
-	e.preventDefault()
+	
 	this.style.backgroundColor ="purple"
-}
-function dragLeave(){
-	this.style.backgroundColor ="black"
-	
-}
-function dragDrop(){
-	this.style.backgroundColor ="grey"
-	this.appendChild(fill)
-	
-}
+	e.preventDefault()}
+
+
+	function dragLeave(){
+		this.style.backgroundColor ="black"
+
+	}
+	function dragDrop(){
+		this.style.backgroundColor ="grey"
+		this.appendChild(fill)
+
+	}

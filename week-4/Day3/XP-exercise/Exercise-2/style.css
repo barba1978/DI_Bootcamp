@@ -40,4 +40,5 @@ footer{
 
 .dropPoint{
 	background-color: blue;
+	position: static;
 }

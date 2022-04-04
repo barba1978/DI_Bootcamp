@@ -1,0 +1,82 @@
+body{
+	background-color: lightgrey;
+	padding: 20px;
+	border: 2px solid black;
+	height: 600px;
+
+
+}
+
+header{
+	border: 2px solid black;
+	width: 30%;
+	height: 100%;
+	align-content: center;
+
+
+}
+
+.buttonClear{
+
+	width: 60%;
+	height: 10%;
+	margin: 5px;
+	border-radius: 10%;
+	border: 2px solid black;
+}
+
+
+.divGroup{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 3px;
+
+
+}
+.divColor{
+	border: 2px solid black;
+	height: 65px;
+	width: 30%;
+}
+
+.red{
+	background-color: red;
+}
+.green{
+	background-color: green;
+}
+.black{
+	background-color: black;
+}
+
+.yellow{
+	background-color: yellow;
+}
+
+.white{
+	background-color: white;
+}
+.blue{
+	background-color: blue;
+}
+
+.screen{
+	display: flex;
+	justify-content: space-around;
+}
+
+section{
+
+	display: grid;
+	grid-gap: 1px;
+	grid-template-columns: repeat(20, 1fr);
+	
+}
+
+section > div {
+	border: 1px solid black;
+
+}
+
+
