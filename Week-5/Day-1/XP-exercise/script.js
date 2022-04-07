@@ -1,118 +1,110 @@
-// 1ST EXERCISE 
+
 
 // // #1
 // function q1() {
-//     var a = 5;
-//     if(a > 1) {
-//         a = 3;
-//     }
-//     alert(a); a=3
+// 	var a = 5;
+// 	if(a > 1) {
+// 		a = 3;
+// 	}
+// 	alert(a);// a= 5
 // }
-
-// // a =3
-
-
 
 // //#2
 // var a = 0;
 // function q2() {
-//     a = 5; 
+// 	a = 5;
 // }
 
 // function q22() {
-//     alert(a);
-// }
-
-
-// // a=5
-
+// 	alert(a);
+// }// a = 5
 
 
 // //#3
 // function q3() {
-//     window.a = "hello";
+// 	window.a = "hello";
 // }
 
 
 // function q32() {
-//     alert(a);
-// }
-
-
-
-
-
+// 	alert(a);
+// } // a= undefined
 
 // //#4
 // var a = 1;
 // function q4() {
-//     var a = "test";
-//     alert(a);
-// }
-
-// // alert inside the function will be a=test
-
-
+// 	var a = "test";
+// 	alert(a);
+// }// test 
 
 // //#5
 // var a = 2;
 // if (true) {
-//     var a = 5;
-//     alert(a);
+// 	var a = 5;
+// 	alert(a);
 // }
-// alert(a);
+// alert(a); // a = 5
 
-// // first alert will be a= 5
-// // second alert will be a= 2
+// EXERCISE 2
 
+// function winBatle(){ return false}
 
+// let experiencePoints= 10
 
-// 2ND EXERCISE 
-
-
-// function winBattle(){
-//     return true;
-// }
-// ()=>true
-
-
-// let experiencePoints=0
-
-// let test=()=> true
-
-// test? experiencePoints=10 : experiencePoints=1
+// winBatle()===true ? experiencePoints=10: experiencePoints=1
 
 // console.log(experiencePoints)
 
+// EXERCISE 3
+// Write a JavaScript arrow function that checks whether the value of the argument passed,
+ // is a string or not. Use ternary operator
+// Check out the example below to see the expected output
 
-// 3RD EXERCISE 
+
+// let isString = (element) => typeof element==="string"
 
 
 
+// console.log(isString('hello')); 
+// console.log(isString([1, 2, 4, 0]));
 
-// let isString=(x)=>typeof x ==="string" ? true :false 
-// console.log(isString("andrea"))
-
-// 4TH EXERCISE 
+//EXERCISE 4
 
 let colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 
 
-colors.forEach( function(element, index,array) {
-    console.log(index+"# choice is "+ element)
-})
+// function sentence(){
+// 	for(let x in colors)
+// 		{ console.log(`${x} choice is ${colors[x]}`)}}
+
+// 	sentence()
 
 
+// function main(){
 
-// 5TH EXERCISE 
+// 	colors.includes("Violet")
+
+// 	colors.includes("Violet")?console.log("yeah"):console.log("no")}
+
+// 	main()
+
+//EXERCISE 5 
+
+// Write a JavaScript program that displays the colors in the following order :
+//  “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect…
+// Hint : Use the array methods taught in class and ternary operator.
+
 
 let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 let ordinal = ["th","st","nd","rd"];
 
-// ??????
 
-// 6TH 
+function main(){
 
+
+}
+
+// EXERCISE 6 
 
 // In this exercise, you have to decide which type of variables you have to use (ie. let or const):
 
@@ -124,19 +116,27 @@ let ordinal = ["th","st","nd","rd"];
 // Display your current bankAccount standing at the end of the month.
 
 
-let bankAmount= 20000
+let bankAmount =0
+
+let taxes =1.17
+
+let details =["+200", "-100", "+146", "+167", "-2900"]
+
+let newarray=[]
+function counter(){
+
+	details.forEach(function(element) {
+		let number=(parseInt(element))
+		newarray.push(number*taxes)
+	})
+	bankAmount=newarray.reduce(function(acc,elem){ return acc+elem})
+	console.log(bankAmount)
+}
 
 
 
-let details = ["+200", "-100", "+146", "+167", "-2900"]
 
-details.forEach(function(number,index){
-    if (number<0){
-        let vat = number*0.17
-        console.log(number+vat)
-
-    }})
-
+counter()
 
 
 
