@@ -1,6 +1,12 @@
-img{
 
-	height: 400px;
-	width: 400px;
 
+#container{
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div{ 
+	border:1px solid black;
+	
 }

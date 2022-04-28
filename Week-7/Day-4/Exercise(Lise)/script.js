@@ -46,20 +46,31 @@ function displayProduct(){
 	for ( let x of products ){
 		let div=document.createElement("div")
 		div.setAttribute("id",x.name);
+
 		let name = document.createElement("p")
 		let text_name =document.createTextNode(x.name)
 		name.appendChild(text_name)
+
+		let payBtn = document.createElement("button")
+		let textBtn = document.createTextNode("Add Cart")
+		payBtn.appendChild(textBtn)
+		
 		let image= document.createElement("IMG")
 		image.setAttribute("src", x.url);
+
 		let price = document.createElement("p")
 		let price_text= document.createTextNode(x.price)
 		price.appendChild(price_text)
+
 		let container=document.getElementById("container")
+		
 		div.appendChild(name)
 		div.appendChild(image)
 		div.appendChild(price)
+		div.appendChild(payBtn)
+
 		container.appendChild(div)
-		div.addEventListener("click",addProduct)
+		payBtn.addEventListener("click",addProduct)
 
 
 		
@@ -71,12 +82,13 @@ displayProduct()
 
 function addProduct(e){
 	
-	console.log(e)
-	let price= e.target.innerHTML
-	window.localStorage.setItem("price",price)
-	let obj=JSON.parse(localStorage.getItem('price'));
-	arr.push(obj)
-	console.log(arr)
+	console.log(e.target.parentNode.id)
+	console.log(e.target.parentNode.querySelector(".price"));
+	//let price= e.target.innerHTML
+	//window.localStorage.setItem("price",price)
+	//let obj=JSON.parse(localStorage.getItem('price'));
+	//arr.push(obj)
+	//console.log(arr)
 	
 
 }
