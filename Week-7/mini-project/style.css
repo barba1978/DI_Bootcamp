@@ -1,0 +1,11 @@
+div{
+	border: 1px dotted black;
+	width: 300px;
+
+}
+
+.checked{
+
+	color: red;
+
+}
