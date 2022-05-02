@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" 
-	href="style.css">
 	<title></title>
 </head>
 <body>
 
-	<div id="container">
+	<form method="GET" id="form">
 
-	</div>
 
-	<form id="form" method="GET">
-		<a href="page.html" class="button">Pay Here</a>
+		<label for="title">Title:</label>
+		<input type="text" name="" id="title"><br>
+		<label for="description">Description:</label>
+		<input type="text" name="" id="description"><br>
+		<label for="meeting-time">Start date and time:</label>
+		<input type="datetime-local" id="start-time"
+		name="start-time" value=" "
+		min="" max=""><br>
+		<label for="end-time">End date and time:</label>
+		<input type="datetime-local" id="end-time"
+		name="meeting-time" value=" "
+		min="" max=""><br>
+		<input type="submit" name="">
+
+
+
 	</form>
+
+	<a href="display.html">Display task</a>
 
 	<script src="script.js"></script>
 </body>
