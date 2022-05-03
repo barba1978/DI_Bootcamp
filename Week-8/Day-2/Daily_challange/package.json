@@ -1,0 +1,14 @@
+{
+  "name": "daily_challange",
+  "version": "1.0.0",
+  "description": "dayli challange",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andrea",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
