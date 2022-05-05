@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include('./partial/head.ejs')%>
+  <body>
+
+    <%- include('./partial/header.ejs')%>
+
+    <%- include('./partial/posts.ejs')%>
+
+<% array.forEach(x=>{%>
+<h3><%= x.name%></h3>
+<h3><%= x.lname%></h3>
+
+<% })%>
+
+
+<%- include('./partial/footer.ejs')%>
+  </body>
+</html>
