@@ -27,21 +27,18 @@ res.json(data)})
 app.use('/create', express.static(__dirname+'/public'))
 app.use('/', express.static(__dirname+'/search'))
 
-// app.get('/',(req,res)=>{
-// res.render('index')
+// app.get('/shop',(req,res)=>{
+// res.sendFile('/public/shop.html')
 // })
 
 
 
 app.get('/search',(req,res)=>{
 searchTest(req.query.search)
-.then(data=>{
-res.json(data)
+// .then(data=> json(data))
+res.sendFile(__dirname+'/search/index.html')
 
 })
-.catch(err=>{
-  console.log(err)
-})})
 
 
 
