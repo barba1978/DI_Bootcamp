@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+  line-height: 25px;
+  background-color: #123752;
+}
+
+input{
+  width: 30%;
+  border-radius: 10px;
+}
+
+p{
+  font-size: 2em;
+  color:#708FA3
+}
+
+button{
+  border-radius: 10px;
+  background-color: #123752;
+  color: white;
+}
+h1{
+  text-align:center;
+  color: #708FA3;
+  font-size:4em;
+
+}
