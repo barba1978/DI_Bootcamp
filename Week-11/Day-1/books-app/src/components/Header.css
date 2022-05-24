@@ -1,0 +1,31 @@
+
+
+.nav{
+background-color:#201A06;
+color: white;
+display: flex;
+justify-content:center;
+}
+
+
+input{
+  margin: 1%;
+ 
+}
+.searchBox{
+width: 60%;
+
+}
+
+
+
+.card{
+display: inline-block;
+margin-top: 3%;
+}
+
+.img{
+    width: 150px;
+    height: 180px;
+}
+
