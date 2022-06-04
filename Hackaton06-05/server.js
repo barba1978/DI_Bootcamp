@@ -25,7 +25,7 @@ res.json(data)})
   console.log(err)})})
 
 app.use('/create', express.static(__dirname+'/public'))
-app.use('/', express.static(__dirname+'/search'))
+app.use('/', express.static(__dirname+'/search')) 
 
 // app.get('/shop',(req,res)=>{
 // res.sendFile('/public/shop.html')
