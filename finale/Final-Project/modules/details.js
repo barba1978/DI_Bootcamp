@@ -35,10 +35,10 @@ const createDetail=(newElem)=>{
 }
 
 const  deleteDetail=(full_name)=>{
-    console.log(full_name);
+    console.log('bla bla ',full_name.trim());
     return knex('mahon')
     .del()
-    .where({full_name:full_name})
+    .whereLike('full_name',`${full_name}%`)
     .returning('*')
     }
 
@@ -48,7 +48,7 @@ const  deleteDetail=(full_name)=>{
         console.log('log in the details ' + full_name,obj)
         return knex('mahon')
         .update(obj)
-        .where({full_name:full_name})
+        .whereLike('full_name',`${full_name}%`)
         .returning('*')
       }
 

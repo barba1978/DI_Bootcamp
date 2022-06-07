@@ -40,7 +40,7 @@ app.use('/parents' , express.static(__dirname + '/public/parents'))
 
 
   app.get('/parents/search',(req,res)=>{
-    searchAlldetails(req.query.search)
+    searchAlldetails(req.query.q)
     .then(data=> {res.json(data)})
     .catch(err=>{console.log(err)})
     
