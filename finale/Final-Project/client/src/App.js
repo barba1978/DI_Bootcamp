@@ -1,5 +1,5 @@
 
-// import './App.css';
+import './App.css';
 import Nursery from './components/nursery/Nursery';
 import Read from './components/parents/Read';
 import NavTop from './components/NavTop'

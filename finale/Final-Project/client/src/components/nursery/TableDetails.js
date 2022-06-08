@@ -3,31 +3,7 @@ import Table from 'react-bootstrap/Table'
 
 function TableDetails(props){
 return(
-<Table striped="columns" >
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Full Name</th>
-      <th>I° Nap-Start</th>
-      <th>I° Nap-End</th>
-      <th>II° Nap-Start</th>
-      <th>II° Nap-End</th>
-      <th>III° Nap-Start</th>
-      <th>III° Nap-End</th>
-      <th>I° Bottle-Feed(time)</th>
-      <th>I° Bottle-Feed(ml)</th>
-      <th>II° Bottle-Feed(time)</th>
-      <th>II° Bottle-Feed(ml)</th>
-      <th>III° Bottle-Feed(time)</th>
-      <th>III° Bottle-Feed(ml)</th>
-      <th>I° Diaper-Change</th>  
-      <th>II° Diaper-Change</th> 
-      <th>III° Diaper-Change</th> 
-      <th>IV° Diaper-Change</th>
-      <th>Notes</th>       
-      </tr>
-  </thead>
-  <tbody>
+<tbody>
     <tr>
       <td>{props.date}</td>
       <td>{props.name}</td>
@@ -35,28 +11,16 @@ return(
       <td>{props.sleep1a}</td>
       <td>{props.sleep2}</td>
       <td>{props.sleep2a}</td>
-      <td>third sleep</td>
-      <td>third sleep</td>
-      <td>first bottle</td>
-      <td>first bottle</td>
-      <td>second bottle</td>
-      <td>second bottle</td>
-      <td>third bottle</td>
-      <td>third bottle</td>
-      <td>first change</td>
-      <td>second change</td>
-      <td>third change</td>
-      <td>fourth change</td>
-      <td>Notes</td>
-      
-     
-
-    </tr>
-
-  </tbody>
-</Table>
-    
-)    
+      <td>{props.first_bottle_time}</td>
+      <td>{props.first_bottle_quantity}</td>
+      <td>{props.second_bottle_time}</td>
+      <td>{props.second_bottle_quantity}</td>
+      <td>{props.first_change}</td>
+      <td>{props.second_change}</td>
+      <td>{props.third_change}</td>
+      <td>{props.notes}</td>
+      </tr>
+</tbody>)    
 }
 
 

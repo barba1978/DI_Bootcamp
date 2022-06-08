@@ -25,15 +25,16 @@ app.use('/home' , express.static(__dirname + '/public/nursery'))
 
 app.use('/parents' , express.static(__dirname + '/public/parents'))
 
-// get all the details from database 
-//  app.get('/details',(req,res)=>{
-//     getAlldetails()
-//     .then(elem=>{res.json(elem)})
-//     .catch(err=>{
-//         console.log(err);
-//     res.json({message:err.message})})
+//get all the details from database 
 
-//   })
+ app.get('/details',(req,res)=>{
+    getAlldetails()
+    .then(elem=>{res.json(elem)})
+    .catch(err=>{
+        console.log(err);
+    res.json({message:err.message})})
+
+  })
 
 
   //searching by the name of the kid :

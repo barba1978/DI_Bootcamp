@@ -1,11 +1,13 @@
 import {useState} from 'react'
-import './Update.css';
+
 
 
 const Update=()=>{
 
 
     const [event,setEvent]=useState(null)
+    const [value,setValue]=useState(null)
+   
 
 const handleClick =(e)=>{
 e.preventDefault()
@@ -25,18 +27,19 @@ alert('The details has been update succesully!')})
 .catch(err=>{console.log(err)
 alert('something went wrong try again!')
 })
-
+setValue()
 }
 return(
 <div>
-<h3>Insert and update Baby's name and details</h3>
+<h2>Insert and update Baby's name and details</h2>
     <div className='topName'>
-    Name: <input type="text"  name="name" id='update_name' /><br/>
+  <h4>Name :</h4><input type="text" value={value} name="name" id='update_name' /><br/>
     </div>
 
 <div className='upDate' >
   <div className='napDiv center'>
-    I° Nap-start(time):<input type="text" onChange={(e)=>setEvent(e)} name="sleep_start" id='sleep_start' /><br/>
+  <h4>Sleeping Time</h4>
+    I° Nap-start(time):<input type="text" value={value} onChange={(e)=>setEvent(e)} name="sleep_start" id='sleep_start' /><br/>
     <button onClick={handleClick}>Update</button><br/>
  
     I° Nap-end(time):<input type="text" onChange={(e)=>setEvent(e)} name="sleep_end" id='sleep_end' /><br/>
@@ -48,13 +51,9 @@ return(
     II° Nap-end(time):<input type="text" onChange={(e)=>setEvent(e)} name="second_sleep_end" id='second_sleep_end' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
 
-    III° Nap-start(time):<input type="text" onChange={(e)=>setEvent(e)} name="third_sleep_start" id='third_sleep_start' /> <br/>
-    <button onClick={handleClick}>Update</button> <br/>
-
-    III° Nap-end(time):<input type="text" onChange={(e)=>setEvent(e)} name="third_sleep_end" id='third_sleep_end' /> <br/>
-    <button onClick={handleClick}>Update</button> <br/>
   </div>
   <div className='eatDiv center'>
+  <h4>Eating Time</h4>
     I° Bottle-Feeding(time):<input type="text" onChange={(e)=>setEvent(e)} name="eat_time" id='eat_time' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
 
@@ -67,13 +66,10 @@ return(
     II° Bottle-Feeding(ml):<input type="text" onChange={(e)=>setEvent(e)} name="second_eat_quantity" id='second_eat_quantity' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
 
-    III° Bottle-Feeding(time):<input type="text" onChange={(e)=>setEvent(e)} name="third_eat_time" id='third_eat_time' /> <br/>
-    <button onClick={handleClick}>Update</button> <br/>
-
-    III° Bottle-Feeding(ml):<input type="text" onChange={(e)=>setEvent(e)} name="third_eat_quantity" id='third_eat_quantity' /> <br/>
-    <button onClick={handleClick}>Update</button> <br/>
+   
   </div>
   <div className='diapDiv center'>
+  <h4>Changing Time</h4>
     I° Diaper-Change(time):<input type="text" onChange={(e)=>setEvent(e)} name="change" id='change' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
 
@@ -83,8 +79,6 @@ return(
     III° Diaper-Change(time):<input type="text" onChange={(e)=>setEvent(e)} name="third_change" id='third_change' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
 
-    IV° Diaper-Change(time):<input type="text" onChange={(e)=>setEvent(e)} name="fourth_change" id='fourth_change' /> <br/>
-    <button onClick={handleClick}>Update</button> <br/>
 
     Special Notes : <input type="text" onChange={(e)=>setEvent(e)} name="note" id='note' /> <br/>
     <button onClick={handleClick}>Update</button> <br/>
