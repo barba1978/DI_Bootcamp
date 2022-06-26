@@ -5,7 +5,7 @@ const path = require('path')
 const cors = require('cors')
 dotenv.config();
 
-const {getAlldetails,createDetail,deleteDetail,updatedetails,searchAlldetails}= require('./modules/details.js');
+const {getAlldetails,createDetail,deleteDetail,getAllnames,updatedetails,searchAlldetails}= require('./modules/details.js');
 
 
 // when i neee to use the post method i need to add :
@@ -36,6 +36,16 @@ app.use('/parents' , express.static(__dirname + '/public/parents'))
 
   })
 
+  //get the all the names 
+
+  app.get('/names',(req,res)=>{
+    getAllnames()
+    .then(elem=>{res.json(elem)})
+    .catch(err=>{
+        console.log(err);
+    res.json({message:err.message})})
+
+  })
 
   //searching by the name of the kid :
 

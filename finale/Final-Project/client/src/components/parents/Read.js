@@ -1,5 +1,6 @@
 
 import {useState} from 'react'
+import Button from 'react-bootstrap/Button'
 
 const Read=()=>{
 
@@ -22,7 +23,7 @@ fetch(`/parents/search?q=${full_name}`)
      <div>
 <div className='top'>
 <h2>Name: </h2> <input type='text' onChange={(e)=>{setName(e.target.value)}}/>
-<button onClick={handleClick}> Find out! </button>
+<Button onClick={handleClick}> Find out! </Button>
 </div>
 {
     data.map(elem=>{
@@ -42,6 +43,9 @@ fetch(`/parents/search?q=${full_name}`)
             <h3> Second Change: {elem.second_change}</h3>
             <h3> Third Change: {elem.third_change}</h3>
             <h3> Note: {elem.note}</h3>
+            </div>
+            <div className='webCam'>
+sjbvluksegiuergeurgeouvgeròugwekgrvò
             </div>
             </div>
         )

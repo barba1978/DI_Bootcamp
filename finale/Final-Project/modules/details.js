@@ -14,6 +14,21 @@ const knex = require('knex')({
   });
 
 
+
+  const getAllnames=()=>{
+const today = new Date();
+const yyyy = today.getFullYear();
+let mm = today.getMonth() + 1; 
+let dd = today.getDate();
+let today_date= yyyy+'-'+mm+'-'+dd
+
+    return knex('mahon')
+    .select('full_name')
+    .where('today_date',`${today_date}%`)
+    
+    }
+
+
 const getAlldetails=()=>{
     return knex('mahon')
     .select('*')
@@ -55,5 +70,5 @@ const  deleteDetail=(full_name)=>{
    
 
 
-module.exports = {getAlldetails,
+module.exports = {getAlldetails,getAllnames,
     createDetail,deleteDetail,updatedetails,searchAlldetails}

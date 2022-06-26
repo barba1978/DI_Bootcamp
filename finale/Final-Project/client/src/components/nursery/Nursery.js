@@ -4,6 +4,7 @@ import Delete from './Delete'
 import Update from './Update'
 import Table from 'react-bootstrap/Table'
 import TableDetails from './TableDetails'
+import Button from 'react-bootstrap/Button'
 import {useState} from 'react'
 import  './Nursery.css'
 
@@ -28,14 +29,17 @@ const handleClick1=()=>{
 
 return(
     <div>
+
+
 <Add/> <br/>
 <Update /> <br/>
 
-<button className='footer' onClick={handleClick}>Display all!</button>
-<button className='footer' onClick={handleClick1}>Close all!</button>
+<Button size ='lg' className='footer' onClick={handleClick}>Display all!</Button>
+<Button size ='lg' className='footer' onClick={handleClick1}>Close all!</Button>
+
 {newData.map(elem=>{
 return(
-<>
+    <div>
     <Table striped="columns" >
   <thead>
     <tr>
@@ -69,20 +73,14 @@ second_bottle_quantity={elem.second_eat_quantity}
 first_change={elem.change}
 second_change={elem.second_change}
 third_change={elem.third_change}
-notes={elem.note}
-/>
-</Table>
+notes={elem.note} />
+
 <Delete/>
-</>
+</Table>
+</div>
+
 )})}
-    </div>
-)}
+</div>)}
 
 export default Nursery
 
-
-
-//<h3>Delete data to database </h3>
-//<Delete /> <br/>
-
-//<TableDetails />

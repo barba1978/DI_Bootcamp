@@ -1,5 +1,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
 
 
 
@@ -7,14 +9,16 @@ import Nav from 'react-bootstrap/Nav'
 function NavTop(){
 return(
     <div>
-    <Nav defaultActiveKey="/" as="ul">
-  <Nav.Item as="li">
-    <Nav.Link href="/">Nursery</Nav.Link>
-  </Nav.Item>
-  <Nav.Item as="li">
-    <Nav.Link href="/parents">Parents</Nav.Link>
-  </Nav.Item>
-</Nav>
+     <Navbar bg="primary" variant="dark">
+    <Container>
+    <Navbar.Brand href="#home">DayCare App</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link href="/">Nursery</Nav.Link>
+      <Nav.Link href="/parents">Parents</Nav.Link>
+    </Nav>
+    </Container>
+  </Navbar>
+ 
 
     </div>
     )
@@ -22,6 +26,3 @@ return(
 
 export default NavTop
 
-
-/* <Link to='/' >Nursery</Link>
-<Link to='/parents' >Parents</Link> */

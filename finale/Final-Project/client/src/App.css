@@ -1,7 +1,5 @@
 
-*{
-background-color: #F8D5FF;
-}
+
 
 .outside{
 display: flex;
@@ -17,7 +15,6 @@ justify-content: center;
   width: 40%;
   align-self: auto;
   margin-top: 3rem;
-  background-color: #FFFFFF;
   font-family: 'Secular One', sans-serif;
   color: #E56EFE;
 }

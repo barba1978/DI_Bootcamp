@@ -1,10 +1,13 @@
 import React from 'react'
 import {useState} from 'react';
+import Button from 'react-bootstrap/Button'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
+
 
 const Add =()=>{
 
 const [full_name,setName]=useState(null)
-const [value,setValue]=useState(null)
 
 
 const today = new Date();
@@ -28,7 +31,8 @@ const addData=(e)=>{
     .then(data=>{console.log(data);
     alert('The details has been uploads succesully!')})
     .catch(err=>{console.log(err)})
-    setValue('')
+   
+
 
 }
        
@@ -36,10 +40,18 @@ const addData=(e)=>{
 
 return(
 <>
-<h2>Create a new day </h2>
+
 <div className='addDetails'>
-<h4>Name :</h4><input type='text'  value={value} onChange={(e)=>setName(e.target.value)} name='' />
-<button onClick={addData}>Create</button>
+<h4>Write here the kid's name</h4><br/>
+
+<input type='text' onChange={(e)=>setName(e.target.value)} name='' />
+    <OverlayTrigger
+     overlay={
+        <Tooltip>
+        Insert the kid's name and create a new day
+        </Tooltip>}>
+      <Button variant="primary" onClick={addData} >Create !</Button>
+    </OverlayTrigger>
 </div>
 </>
 )

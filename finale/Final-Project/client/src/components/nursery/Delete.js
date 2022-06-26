@@ -23,7 +23,7 @@ return(
 <div>
 <form onSubmit={delData}>
 Name:<input type='text' placeholder='Robert Kiddo' onChange={(e)=>setName(e.target.value)}  />
-<input type='submit' value='Submit' />
+<input type='submit' value='Delete !' />
 </form>
 
 </div>
