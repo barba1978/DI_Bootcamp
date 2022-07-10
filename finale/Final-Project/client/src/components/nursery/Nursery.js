@@ -40,7 +40,7 @@ return(
 {newData.map(elem=>{
 return(
     <div>
-    <Table striped="columns" >
+    <Table striped="columns" bordered hover variant="dark">
   <thead>
     <tr>
       <th>Date</th>

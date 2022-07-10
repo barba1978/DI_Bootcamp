@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Button from 'react-bootstrap/Button'
 
 
 const Delete =()=>{
@@ -22,8 +23,9 @@ const delData=(e)=>{
 return(
 <div>
 <form onSubmit={delData}>
-Name:<input type='text' placeholder='Robert Kiddo' onChange={(e)=>setName(e.target.value)}  />
-<input type='submit' value='Delete !' />
+<label for="delete">Name: </label>
+<input type='text' id='delete' placeholder='name to delete ...' onChange={(e)=>setName(e.target.value)}  />
+<Button variant="warning"> Delete !</Button>
 </form>
 
 </div>

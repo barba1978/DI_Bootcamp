@@ -42,7 +42,7 @@ return(
 <>
 
 <div className='addDetails'>
-<h4>Write here the kid's name</h4><br/>
+<h4>Create a new day inserting each kid's name</h4><br/>
 
 <input type='text' onChange={(e)=>setName(e.target.value)} name='' />
     <OverlayTrigger
@@ -52,6 +52,10 @@ return(
         </Tooltip>}>
       <Button variant="primary" onClick={addData} >Create !</Button>
     </OverlayTrigger>
+</div>
+
+<div>
+  <input></input>  
 </div>
 </>
 )

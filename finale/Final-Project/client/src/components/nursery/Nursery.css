@@ -1,7 +1,12 @@
+body{
+
+background-image: url('back-pic.jpg');
+background-size: cover;
+}
+
 
 .addDetails{
 
-  background-color: azure;
   border-radius: 4%;
   margin: 2rem;
   width: 22%;
@@ -52,6 +57,9 @@ button{
 
     
 }
+
+
+
 .outDiv{
 border-bottom: 1 px double black;
 display: flex;
@@ -83,9 +91,7 @@ margin:20px;
 text-align: center;
 }
 
-h4{
-  background-color: #4E84FF;
-}
+
 
 Button{
   margin:2px;

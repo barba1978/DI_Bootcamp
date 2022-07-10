@@ -1,5 +1,7 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
 
 
 
@@ -20,22 +22,22 @@ const Update=()=>{
     const [newName,setName]=  useState(null)
 
 
-const getNames=(e)=>{
-      e.preventDefault()
-      console.log('its working');
+
+ useEffect(()=>{
   fetch('/names')
   .then(elem=>elem.json())
   .then(data=>{
     setData(data)
   console.log(newData);})
-  
-  
-  
-  }
+
+
+ })
+ 
+ 
+
 
 const handleClick =(e)=>{
 e.preventDefault()
-//let full_name = document.getElementById('update_name').value
 console.log(e.target.name);
 fetch(`/addNew/${newName }`,{
     method:'PUT',
@@ -55,10 +57,22 @@ alert('something went wrong try again!')
 }
 return(
 <div>
-<h4>Click on the circle and get all the names you added today </h4>
-<div className='outDiv' onClick={getNames}>
-<div className='newDiv'><h6>Click here=></h6></div><br/>
-{newData.map(elem=>{return(<button className='divNames' id={elem.full_name} onClick={(test)=>{setName(test.target.innerText)}}><p className='parNames'>{elem.full_name}</p></button>)})}
+<div className='outDiv'>
+{newData.map(elem=>{return(
+  <CardGroup>
+  <Card style={{ width: '12rem' }}>
+  <Card.Img variant="top" src="baby.jpg/100px180" />
+  <Card.Body>
+    <Card.Title>{elem.full_name}</Card.Title>
+    <Card.Text>
+      Update now the day of the kid
+    </Card.Text>
+    <Button variant="primary" id={elem.full_name} onClick={(test)=>{setName(test.target.innerText)}} >Update</Button>
+  </Card.Body>
+</Card>
+</CardGroup>
+)})}
+   
  
  </div>
  
