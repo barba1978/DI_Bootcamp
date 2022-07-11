@@ -75,11 +75,13 @@ second_change={elem.second_change}
 third_change={elem.third_change}
 notes={elem.note} />
 
-<Delete/>
+
 </Table>
+
 </div>
 
 )})}
+<Delete/>
 </div>)}
 
 export default Nursery

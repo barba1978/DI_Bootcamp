@@ -25,7 +25,7 @@ return(
 <form onSubmit={delData}>
 <label for="delete">Name: </label>
 <input type='text' id='delete' placeholder='name to delete ...' onChange={(e)=>setName(e.target.value)}  />
-<Button variant="warning"> Delete !</Button>
+<input name='Delete' type='submit' />
 </form>
 
 </div>

@@ -24,14 +24,12 @@ const Update=()=>{
 
 
  useEffect(()=>{
+
   fetch('/names')
   .then(elem=>elem.json())
   .then(data=>{
     setData(data)
-  console.log(newData);})
-
-
- })
+  console.log(newData)})},[newData])
  
  
 
@@ -39,7 +37,7 @@ const Update=()=>{
 const handleClick =(e)=>{
 e.preventDefault()
 console.log(e.target.name);
-fetch(`/addNew/${newName }`,{
+fetch(`/addNew/${newName}`,{
     method:'PUT',
     headers:{
         'Content-type':'application/json'
@@ -61,13 +59,13 @@ return(
 {newData.map(elem=>{return(
   <CardGroup>
   <Card style={{ width: '12rem' }}>
-  <Card.Img variant="top" src="baby.jpg/100px180" />
+  <Card.Img variant="top" src="baby.jpg" alt='card image' />
   <Card.Body>
     <Card.Title>{elem.full_name}</Card.Title>
     <Card.Text>
       Update now the day of the kid
     </Card.Text>
-    <Button variant="primary" id={elem.full_name} onClick={(test)=>{setName(test.target.innerText)}} >Update</Button>
+    <Button variant="primary" id={elem.full_name} onClick={(test)=>{setName(test.target.id)}}>Update</Button>
   </Card.Body>
 </Card>
 </CardGroup>
