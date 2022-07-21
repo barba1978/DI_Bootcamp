@@ -3,7 +3,7 @@
 function display(){
 const query=document.getElementById('search').value
 fetch(`http://localhost:5001/search?search=${query}`)
-.then(res=> json(res))
+.then(res=> res.json())
 .then(data=>{console.log(data)})
 // .then(data => {
 // renderProducts(data)})
@@ -12,19 +12,7 @@ fetch(`http://localhost:5001/search?search=${query}`)
 }
 
 
-function renderProducts (arr) {
-  root.innerHTML = '';
-    const root = document.getElementById('root');
-    root.innerHTML = '';
-    arr.forEach((item, i) => {
-      const div = document.createElement('div');
-      const h2 = document.createElement('h2');
-      h2.innerText = item.benchmark;
-      div.appendChild(h2);
-      root.appendChild(div);
-    });
 
-}
 
 display()
 
