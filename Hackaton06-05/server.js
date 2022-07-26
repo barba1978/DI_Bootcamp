@@ -2,6 +2,7 @@ const express =  require ('express')
 const env  = require('dotenv')
 const bodyParser = require("body-parser");
 const router = express.Router();
+const cors = require('cors')
 
 
 
@@ -10,11 +11,13 @@ const {getAllTests,searchTest,createTest}= require('./modules/test.js')
 const app =express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(cors())
 env.config();
-app.set('view engine', 'ejs');
 
 
 
+
+//post request to create a element in the database
 
 app.post('/product',(req,res)=>{
 console.log(req.body);
@@ -31,13 +34,12 @@ app.use('/', express.static(__dirname+'/search'))
 // res.sendFile('/public/shop.html')
 // })
 
-
+// seach test in the database 
 
 app.get('/search',(req,res)=>{
-searchTest(req.query.search)
-// .then(data=> json(data))
-res.sendFile(__dirname+'/search/index.html')
-
+searchTest(req.query.q)
+.then(data=> {res.json(data)})
+.catch(err=>{console.log(err)})
 })
 
 

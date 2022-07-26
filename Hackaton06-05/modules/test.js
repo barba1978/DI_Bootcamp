@@ -18,7 +18,7 @@ return knex('tests')
 
 const searchTest=(name)=>{
   return knex('tests')
-  .select('benchmark','note','basic_score','advanced_score','expert_score','elite_score','phisical_ability')
+  .select('*')
   .whereILike('benchmark',`${name}%`)
 
 }
